@@ -53,6 +53,11 @@ popd
 
 pip install -e .
 ```
+## Additional Dependencies
+Some additional packages might be useful for the work
+```
+pip install opencv-python h5py numba tqdm scipy trimesh
+```
 
 ## Some other notes
 You can also use ```sbatch``` to submit the jobs to remote cluster instead of starting a interactive job.
