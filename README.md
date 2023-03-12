@@ -1,4 +1,4 @@
-# Guide to install tiny-cuda-nn on euler cluster
+# Guide to setup conda environment for ```autolabel``` on euler cluster
 Please create a conda environment with Python 3.8 or 3.9 before starting the installation
 
 ## 1. Basic environmental setups
@@ -33,5 +33,25 @@ Note:
 * If you get some GCC or G++ error, that is mostly due to the missmatched versions of gcc and cuda. Please check the all loaded modules. You can also use 
 ```module avail gcc/cuda``` to check the available versions in euler
 
+
+## Run the rest of commands in autolabel
+```
+git clone --recursive git@github.com:cvg/Hierarchical-Localization.git
+pushd Hierarchical-Localization/
+python -m pip install -e .
+popd
+
+git submodule update --init --recursive
+pushd torch_ngp
+git submodule update --init --recursive
+pip install -e .
+
+###This command again requires GPU access, please start an interactive job as installation for tiny-cuda-nn
+bash scripts/install_ext.sh 
+
+popd
+
+pip install -e .
+```
 
 #!/bin/sh
