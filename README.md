@@ -25,7 +25,7 @@ conda install ffmpeg
 Run ```conda list ``` to check whether pytorch of cuda-version is correctly installed
 
 ## 3. Install tiny-cuda-nn
-Run ```srun --gpus=1 --ntasks=2 --mem-per-cpu=4G -ply bash``` to start an interactive job for installation
+Run ```srun --gpus=1 --ntasks=2 --mem-per-cpu=4G -ply bash``` to start an interactive job for installation.
 Then, run ```pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch``` to install the package
 Note:
 * If you get error like ```slurmstepd: error: poll(): Bad address ```, that means the installation got killed due to lack of memory. In this case, please increase the memory and cores in the command for starting an interactive job
