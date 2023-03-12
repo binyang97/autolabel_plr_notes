@@ -1,7 +1,8 @@
 # Guide to install tiny-cuda-nn on euler cluster
 Please create a conda environment with Python 3.8 or 3.9 before starting the installation
 
-## 1. Open the bashrc file (~/.bashrc) and type the following command:
+## 1. Basic environmental setups
+Open the bashrc file (~/.bashrc) and type the following command
 ```
 module load eth_proxy cuda/11.3.1 gcc/8.2.0 ninja
 export CUDA_HOME='/cluster/apps/gcc-8.2.0/cuda-11.3.1-o54iuxgz6jm4csvkstuj5hjg4tvd44h3' 
