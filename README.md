@@ -34,7 +34,7 @@ Note:
 ```module avail gcc/cuda``` to check the available versions in euler
 
 
-## Run the rest of commands in autolabel
+## 4. Run the rest of commands in autolabel
 ```
 git clone --recursive git@github.com:cvg/Hierarchical-Localization.git
 pushd Hierarchical-Localization/
@@ -54,4 +54,11 @@ popd
 pip install -e .
 ```
 
+## Some other notes
+You can also use ```sbatch``` to submit the jobs to remote cluster instead of starting a interactive job.
+If you want to submit a job with bash script, you have to structure MyJob.sh as following.
+```
 #!/bin/sh
+---- here is your work for submission----
+```
+and run ```dos2unix MyJob.sh``` in terminal to convert linebreaks in your bash file from dos format to unix format. (Otherwise ```sbatch``` will report an error)
