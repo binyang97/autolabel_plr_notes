@@ -53,10 +53,12 @@ popd
 
 pip install -e .
 ```
+Note: Open3d is not supported for CetOS Operating System. The installation of that package can be skipped if encountering the error as it is only used for visualization.
+
 ## Additional Dependencies
 Some additional packages might be useful for the work
 ```
-pip install opencv-python h5py numba tqdm scipy trimesh
+pip install opencv-python h5py numba tqdm scipy trimesh wandb rich tensorboardX
 ```
 
 ## Some other notes
